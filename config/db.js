@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
-export const connectDB=async(username,password)=>{
-    const URL= `mongodb+srv://aaryarastogi:videoprogresstracker@videoprogresstracker.xfbpfxb.mongodb.net/?retryWrites=true&w=majority&appName=videoProgressTracker`
+export const connectDB=async()=>{
+    const URL= process.env.MONGO_URI
     try {
         await mongoose.connect(URL,{});
         console.log('connected to mongodb')

@@ -12,7 +12,7 @@ app.use(express.json());
 
 app.use('/api/progress', progressRoutes);
 
-connectDB(process.env.USERNAME , process.env.PASSWORD);
+connectDB();
 
 const PORT=process.env.PORT || 8000;
 
